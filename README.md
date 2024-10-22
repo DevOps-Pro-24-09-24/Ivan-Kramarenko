@@ -1,20 +1,18 @@
-# Налаштування хуків Git
+# Configure Git hooks
 
-Щоб налаштувати хуки Git після клонування репозиторію, виконайте наступну команду:
+To configure Git hooks after cloning the repository, run the following command:
 git config core.hooksPath .githooks
 
-# Правила оформлення commit message
+# Commit message formatting rules
 
-Усі коміт повідомлення повинні починатися з префіксу `DJ-X:` або `DJ-XXXX:`, де `DJ` — це абревіатура проєкту, а `X` — це номер завдання (від 0 до 100000).
+All commit messages must start with the prefix `DJ-X:` or `DJ-XXXX:`, where `DJ` is the project abbreviation and `X` is the task number (0 to 100000).
 
-**Приклад:**
+**Example:**
 
 DJ-1234: Implement user authentication feature
 
-# Перевірка форматування коду
+# Checking code formatting
 
-Для перевірки форматування коду використовується `flake8`. Перед комітом Git автоматично запускає цей лінтер.
-
-Щоб вручну перевірити форматування, виконайте команду: flake8
-
-Якщо будуть знайдені помилки форматування, їх необхідно виправити перед комітом.
+`flake8` is used to check code formatting. Before a commit, Git automatically runs this linter.
+To manually check the formatting, run the command: flake8
+If formatting errors are found, they must be corrected before committing.
