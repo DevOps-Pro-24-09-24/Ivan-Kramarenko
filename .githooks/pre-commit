@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "Running flake8 for Python code formatting check..."
+flake8
+if [[ $? -ne 0 ]]; then
+    echo "Python code formatting errors found. Please fix them before committing."
+    exit 1
+fi
