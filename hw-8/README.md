@@ -61,15 +61,6 @@ aws ec2 wait instance-running --instance-ids $DB_INSTANCE_ID
 ```
 </details>
 
-AMI's creation process
-
-<details>
-
-![alt text](screenshots/image.png)
-![alt text](screenshots/image-1.png)
-</details>
-
-
 ## This script will do next:
 
 - create an App and DB AMI's with Packer;
