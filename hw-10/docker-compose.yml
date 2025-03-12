@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - MYSQL_DATABASE=flask_db
+      - MYSQL_USER=flask_user
+      - MYSQL_PASSWORD=flask_password
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0
+    environment:
+      - MYSQL_DATABASE=flask_db
+      - MYSQL_USER=flask_user
+      - MYSQL_PASSWORD=flask_password
+      - MYSQL_ROOT_PASSWORD=flask
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
